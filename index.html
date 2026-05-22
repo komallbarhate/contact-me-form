@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Get In Touch</title>
+  <meta name="description" content="Reach out to us through our contact form. We'd love to hear from you and will respond as soon as possible." />
+  <meta name="keywords" content="contact, get in touch, send message, email" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="page-wrapper">
+
+    <!-- Left Panel: Info Section -->
+    <aside class="info-panel" aria-label="Contact information">
+      <div class="info-content">
+        <div class="brand">
+          <div class="brand-icon" aria-hidden="true">✉</div>
+          <span class="brand-name">ContactHub</span>
+        </div>
+
+        <h1 class="info-heading">Let's Start a Conversation</h1>
+        <p class="info-subtext">
+          Have a question, a project idea, or just want to say hello?
+          We'd love to hear from you. Fill out the form and we'll get
+          back to you within 24 hours.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📍</div>
+            <div class="contact-text">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Jalgaon, India</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📧</div>
+            <div class="contact-text">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">barhate.komal12@gmail.com</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📞</div>
+            <div class="contact-text">
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">+91 94042 78044</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-links" aria-label="Social media links">
+          <a href="https://x.com/fairdopeee?s=21" class="social-btn" id="social-twitter" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">𝕏</a>
+          <a href="https://www.linkedin.com/in/komal-barhate-649108338?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="social-btn" id="social-linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
+          <a href="https://www.instagram.com/komallbarhate?igsh=MTJhcXlyZ20zeXhqaw%3D%3D&utm_source=qr" class="social-btn" id="social-instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">ig</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Panel: Contact Form -->
+    <section class="form-panel" aria-label="Contact form section">
+      <div class="form-container">
+        <div class="form-header">
+          <h2 class="form-title">Send a Message</h2>
+          <p class="form-subtitle">All fields marked with <span class="required-star">*</span> are required.</p>
+        </div>
+
+        <!-- Success Message (hidden by default) -->
+        <div class="success-message" id="success-message" role="alert" aria-live="polite" aria-hidden="true">
+          <div class="success-icon" aria-hidden="true">✓</div>
+          <div class="success-text">
+            <strong>Message Sent!</strong>
+            <span>Thank you for reaching out. We'll be in touch soon.</span>
+          </div>
+        </div>
+
+        <form
+          id="contact-form"
+          action="submit_form.php"
+          method="POST"
+          novalidate
+          aria-label="Contact form"
+        >
+
+          <!-- Name & Email Row -->
+          <div class="form-row">
+
+            <!-- Name Field -->
+            <div class="form-group" id="group-name">
+              <label for="name" class="form-label">
+                Full Name <span class="required-star" aria-hidden="true">*</span>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">👤</span>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="John Doe"
+                  required
+                  autocomplete="name"
+                  aria-required="true"
+                  aria-describedby="name-error"
+                />
+                <span class="input-status-icon" id="name-status" aria-hidden="true"></span>
+              </div>
+              <span class="error-msg" id="name-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group" id="group-email">
+              <label for="email" class="form-label">
+                Email Address <span class="required-star" aria-hidden="true">*</span>
+              </label>
+              <div class="input-wrapper">
+                <span class="input-icon" aria-hidden="true">✉️</span>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="john@example.com"
+                  required
+                  autocomplete="email"
+                  aria-required="true"
+                  aria-describedby="email-error"
+                />
+                <span class="input-status-icon" id="email-status" aria-hidden="true"></span>
+              </div>
+              <span class="error-msg" id="email-error" role="alert" aria-live="polite"></span>
+            </div>
+
+          </div>
+
+          <!-- Subject Field -->
+          <div class="form-group" id="group-subject">
+            <label for="subject" class="form-label">Subject</label>
+            <div class="input-wrapper">
+              <span class="input-icon" aria-hidden="true">📝</span>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                class="form-input"
+                placeholder="What is this regarding?"
+                autocomplete="off"
+                aria-describedby="subject-hint"
+              />
+              <span class="input-status-icon" id="subject-status" aria-hidden="true"></span>
+            </div>
+            <span class="hint-msg" id="subject-hint">Optional — helps us route your message faster.</span>
+          </div>
+
+          <!-- Message Field -->
+          <div class="form-group" id="group-message">
+            <label for="message" class="form-label">
+              Message <span class="required-star" aria-hidden="true">*</span>
+            </label>
+            <div class="input-wrapper textarea-wrapper">
+              <textarea
+                id="message"
+                name="message"
+                class="form-input form-textarea"
+                placeholder="Write your message here…"
+                required
+                rows="5"
+                maxlength="1000"
+                aria-required="true"
+                aria-describedby="message-error message-counter"
+              ></textarea>
+            </div>
+            <div class="textarea-footer">
+              <span class="error-msg" id="message-error" role="alert" aria-live="polite"></span>
+              <span class="char-counter" id="message-counter" aria-live="polite">0 / 1000</span>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="submit-btn" class="submit-btn" aria-describedby="submit-status">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-icon" aria-hidden="true">→</span>
+            <span class="btn-loader" aria-hidden="true"></span>
+          </button>
+          <span id="submit-status" class="sr-only" aria-live="polite"></span>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- EmailJS SDK — sends emails directly from the browser, no server needed -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
