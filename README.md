@@ -6,8 +6,8 @@ A clean, responsive contact form built with HTML, CSS, and JavaScript — featur
 
 ## 🌐 Live Demo
 
-> Hosted via GitHub Pages:  
-> **[https://komallbarhate.github.io/contact-me-form](https://komallbarhate.github.io/contact-me-form)**
+> Hosted on Vercel:  
+> **https://contact-me-form-teal.vercel.app/**
 
 ---
 
